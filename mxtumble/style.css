@@ -1,0 +1,565 @@
+/*
+THEME NAME: T1
+THEME URI: http://www.livetardy.com/T1
+DESCRIPTION: A tumblelog theme styled from Sandbox
+VERSION: 0.0.2
+AUTHOR: <a href="http://www.livetardy.com/">Kirk Tardy</a> | Credits Ben at <a href="http://openswitch.org">openswitch.org</a>
+AUTHOR URI:
+*/
+
+/* Change Log
+
+	Version 0.0.2 - Support for WordPress 2.3 Tags on blog and individual pages, added Tags Template Page
+	Version 0.0.1 - Original Release
+*/
+
+* { margin: 0; padding: 0; }
+
+p { margin-bottom: 18px; }
+
+	p a:hover{ text-decoration: underline; }
+
+a, a:visited, a:hover { text-decoration: none; color: #33c; } /* #c00 = red*/
+	
+	a img { border: none; background: #fff; }
+
+.clearer { clear: both; }
+
+blockquote { margin: 8px 18px 8px 0; padding-left: 18px; border-left: 1px solid #ccc; font-size:12px; color:#666; }
+
+img { max-width: 420px; }
+
+img.left { padding: 3px; margin: 0.5em 15px 0.5em 0; border: 1px solid #bbb; float: left; }		
+
+img.right { padding: 3px; margin: 0.5em 0 0.5em 15px; border: 1px solid #bbb; float: right; clear: right; }
+
+img.center { display: block; padding: 3px; margin: 0 auto 1em auto; border: 1px solid #bbb; float: none; }
+
+/*[[ --- Post Permalink and Comment-Count ---]]*/
+
+.post span.permalink { border-width: 0px; font-size: 12px; position: relative; float: right; right: 0px; top: -10px; display: none; }
+
+	.post span.permalink a { color: #fff; border: none; font-size: 14px; font-weight: bold; font-family: "Lucida Grande", Verdana, Arial, sans-serif;}
+
+	.post span.permalink span.comment-count {	background: url('images/comments.png') no-repeat; padding-left: 19px; }
+
+	/*[[ --- Post Hover ---]]*/
+
+	/* div.post:hover span.permalink { display: block; padding-right: 10px; } */ /* Default post hover to reveal Permalink and Comment-count */
+
+/*[[ --- Entry Wrapper and Entry Content Defaults ---]]*/
+
+div.entry-wrapper { } /* Default Wrapper */
+
+div.entry-content { width: 420px; margin-right: 10px; } /* Default Content */
+	
+	div.entry-content ol { margin-left: 20px; margin-bottom: 18px; }
+
+	div.entry-content ul { margin-left: 20px; margin-bottom: 18px; }
+	
+		div.entry-content ul li { line-height: 24px; }
+
+/*[[ --- Core Navigation Links ---]]*/
+
+#nav-below {  }
+
+	.nav-previous { margin-bottom: 20px; float: left; }
+	
+	.nav-next { margin-bottom: 20px; float: right; }
+	
+	body.single #nav-below { display: none; }
+
+#nav-above {  }
+	
+	body.home #nav-above { display: none; }
+	
+	body.single #nav-above { padding-bottom: 20px; }
+	
+	body.search #nav-above { display: none; }
+	
+	body.archive #nav-above { display: none; }
+
+/*[[ --- Body ---]]*/
+
+body { 
+	font-size: 12px; 
+	line-height: 19px; 
+	font-family:      'Lucida Grande', Helvetica, sans-serif;
+	background-color: #eee; 
+	
+	margin: 0 auto 0; 
+	width: 420px; 
+	
+}
+
+/*[[ --- Main Page Content Wrapper ---]]*/
+
+#wrapper { 
+	padding:15px; background-color: #fff;
+	margin-right: 10px;
+	float: left;
+	width: 420px;
+	min-height: 550px;
+}
+
+/*[[ --- Miscellaneous ---]]*/
+
+#access { position: absolute; margin-top: -9999px; } /* Just Hiding some of Sandbox's items */
+
+#header { 
+	padding:          30px 0px 50px 0px;
+  margin:           0px;
+  text-align:       center;
+}
+
+	#blog-description { display: none; }
+	
+	#header h1 a {
+		font:             Bold 55px 'Arial Black', Tahoma, Helvetica, sans-serif; 
+		color: #444;
+		letter-spacing:   -2px;
+		line-height:      50px;
+	}
+
+	.promo { padding:0px 0px 5px 0; margin: 0; float:right; text-align: right; }
+
+		.promo a { border:none; }
+		
+		#search { margin: 0 0 5px 0; }
+			
+			input.search_input { width: 125px; border: 1px solid #ccc; padding: 2px; }
+		
+		span.feed { margin: 0 5px;}
+	
+#container { margin: 0 auto 0; padding: 0;  }
+
+#masthead { }
+
+	/*[[ --- Site Navigation Menu Styles --- ]]*/
+
+	 #nav-menu {background-color: #ccc; }
+
+		 #nav-menu ul { list-style-type: none; margin: 0; padding: 0; }
+
+			 #nav-menu ul li { display: inline; }
+
+				 #nav-menu ul li a { text-decoration: none; padding: 3px 5px; }
+
+				 #nav-menu ul li a:hover { color: #333; background: #fff; }
+
+/*[[ --- Individual Page Title's like Search, Category Archives, etc. ---]]*/
+
+h2.page-title { width: 500px; background: url('images/page_divider.gif') top center no-repeat; display: block; font-size: 14px; color: #777; line-height: 40px; text-align: right; }
+
+/*[[ --- Tags ---]]*/
+
+.tags span.tags_sep { color: #777; }
+
+.home .tags p, .archive .tags p { display: none; } /* Hides all the tags on the blog and archives by default */
+
+.single .tags p { font-size: .95em; background: #EEEEFF; width: 500px; padding: 0 5px; margin-top: 15px; } /* Displays all the tags on Single Post Pages */
+
+	/*[[ --- Tags Archive Page Template ---]]*/
+	
+	.tags_archive { margin: 20px 0 50px; padding: 10px 3px; background: #eeeeff; }
+	
+		.tags_archive a { color: #26466d; }
+		
+			.tags_archive a:hover { background: #26466d; color: #fff; }
+
+/*[[ --- Post ---]]*/
+
+.post { margin-bottom: 30px; }
+
+.post h2 { 
+	font-size: 18px; 
+	font-weight: Bold;
+	letter-spacing: -1px;
+	margin: 0px 0px 10px 0px; 
+} /* Defaults for Post Titles */
+
+.post .left-wrapper {
+	position: relative;
+	top: -30px;
+	left: -210px;
+	
+	width: 195px;
+	
+	text-align: right;
+	
+	/* Remove the pushing that this entry-date does
+	   to the content */
+	margin-right: -195px;
+	float: left; /* Removes whitespace after the entry-date */
+}
+
+.post .left-wrapper .entry-date, .post .left-wrapper .posted-date {
+	background-color: #ccc;
+	white-space:      nowrap;
+	font:             Normal 20px Helvetica, sans-serif;
+	letter-spacing:   -1px;
+	color:            #fff;
+	display:          inline;
+	padding:          2px 5px 2px 5px;
+	line-height:      20px;
+}
+
+.post .left-wrapper .entry-date a, .post .left-wrapper .posted-date a {
+  color:            #fff;
+  text-decoration:  none;
+}
+
+
+.post .entry-wrapper {
+	clear: all;
+}
+
+/* Regular Post */
+.post .entry-content {
+    font-size:        12px;
+    color:            #444;
+    line-height:      17px;
+    text-align: justify;
+}
+
+.post .entry-content blockquote {
+    font-style: italic;
+}
+
+.post .entry-meta {
+	display: none;
+}
+            
+
+	/*.post h2 a, .post h3 a, .post h3 a:visited, .post h3 a:hover { background: #fff; color: #333; font-weight: normal; font-family: arial, sans-serif; font-size: 20px; border: none; }*/
+
+/*[[ --- Posted Date ---]]*/
+/*
+.posted-date {text-align: left;}
+
+	.posted-date h2 {
+		font: Bold 24px Helvetica, sans-serif; 
+		display: block; 
+		color: #444; 
+		line-height: 20px;
+		
+		
+		margin-bottom: -10px;
+	}
+
+		.posted-date h2 a {color: #666; }
+		
+		.posted-date h2 a:hover { color: #555; }
+
+	.posted-date a { border: none; }
+*/
+
+/* [[ --- [[ --- Individual Category Styles --- ]] --- ]] */
+
+	/* Notes
+	div.category-XXXXXX.post:hover span.permalink { display: none; }   Use to Hide a specific Categories Permalink and Comment Count when hovered over
+	.category-content and .entry-wrapper - if you adjust one, must adjust the other to get the permalink and comment-count to line up like the default setting
+	*/
+
+
+
+	/*[[ --- Journal Category ---]]*/
+
+	div.category-journal { margin-top: 50px; }
+		
+		/** BUG: We had to add div.category-journal to the front of entry-meta here **/
+		div.category-journal div.entry-date, div.category-journal div.entry-meta { display: none; }
+		
+		div.category-journal div.tags p { display: block; font-size: .95em; background: #EEEEFF; width: 500px; padding: 0 5px; margin: 0; } /* Displays the Tags on the blog for all Journal Posts - Use similar for displaying Tags in other categories */
+
+
+/*[[ --- Update Category ---]]*/
+div.category-update { 
+	margin-top: 50px;
+} 
+
+div.category-update h2.entry-title { 
+	/* We don't completely hide this, we just make it invisible
+			   so that we can change the margins */
+	visibility: hidden;
+	margin-bottom: -47px;
+} 
+
+div.category-update div.entry-content p {
+	font-size: 18px;
+}
+
+	/*[[ --- Url Category ---]]*/
+
+	div.category-link { margin-top: 50px; margin-bottom: -20px;}
+		
+		div.category-link h2.entry-title { 
+			/* We don't completely hide this, we just make it invisible
+			   so that we can change the margins */
+			visibility: hidden;
+			margin-bottom: -52px;
+		} 
+		
+		div.category-link div.entry-content p { 
+			margin-bottom: 0px;
+			font-size: 17px;
+		}
+		
+		div.category-link div.entry-content a { 
+			font:             Bold 20px Helvetica, sans-serif;
+      color:            #33c;
+		}
+		
+			div.category-link div.entry-content a:visited {  }
+			
+			div.category-link div.entry-content a:hover {  }
+		
+		div.category-link .entry-meta { display: none; }
+		
+		div.category-link div.entry-wrapper { }
+
+	/*[[ --- Photo Category ---]]*/
+
+	div.category-photo  { margin-top: 70px; }
+
+		div.category-photo h2.entry-title { 
+			/* We don't completely hide this, we just make it invisible
+			   so that we can change the margins */
+			visibility: hidden;
+			margin-bottom: -52px;
+		}
+
+		div.category-photo div.entry-content {
+			clear: all;
+			
+			text-align: center;
+		}
+
+			div.category-photo div.entry-content img  { 
+				
+				max-width: 400px; 
+				border:           solid 10px #eee;
+				
+			}
+			
+			div.category-photo div.entry-content p { 
+				/* This affects the image too, since the image is being wrapped in
+				   a p */
+				margin-top: -12px;
+			}
+			
+		div.category-photo div.entry-meta { display: none; }
+
+	/*[[ --- Conversation Category ---]]*/
+
+	div.category-conversation { margin-top: 40px; }
+
+		div.category-conversation h2.entry-title {  }
+		
+			div.category-conversation h2.entry-title a { }
+		
+		div.category-conversation div.entry-date { }
+		
+		div.category-conversation div.entry-content p { 
+			border-left: 5px solid #ddd;
+			background-color: #f8f8f8;
+			padding-left: 5px;
+		}
+		
+		div.category-conversation div.entry-content ul {
+			background-color: #f8f8f8;
+	    list-style-type:  none;
+	    margin:           0px;
+	    padding:          0px;
+	    border-left:      solid 5px #ddd;
+    }
+    
+    div.category-conversation div.entry-content ul li {
+	    border-bottom:    solid 1px #ddd;
+	    font-size:        12px;
+	    padding-left: 5px;
+	    color:            #444;
+	  }
+	
+    div.category-conversation div.entry-content ul li .speaker {
+	    font-weight:      bold;
+      color:            #111;
+	  }
+		
+		div.category-conversation div.entry-meta { display: none; }
+
+
+	/*[[ --- Quote Category ---]]*/
+
+	div.category-quote { margin-top: 80px;  }
+
+		div.category-quote h2.entry-title { 
+			/* We don't completely hide this, we just make it invisible
+			   so that we can change the margins */
+			visibility: hidden;
+			margin-bottom: -48px;
+		}
+
+		div.category-quote div.entry-content {
+		}
+		
+		div.category-quote div.entry-content:before  {
+			display: inline;
+			content: "“";
+			
+			font:             Bold 60px Georgia, serif;
+      line-height:      8px;
+      vertical-align:   -20px;
+		}
+			
+		div.category-quote p { 
+			display: inline; 
+			font:             Bold 28px Helvetica, sans-serif;
+      letter-spacing:   -1px;
+      color:            #666;
+		}
+		
+		div.category-quote div.entry-content cite:before {
+			content: "\2014"; /* Unicode for -- */
+		}
+			
+		div.category-quote div.entry-content cite { 
+			
+			font-size:        21px;
+	    font-weight:      Bold;
+	    font-style: Normal;
+	    color:            #444;
+	    letter-spacing:   -1px;
+	    text-align: right;
+	    padding-left: 20px;
+		}
+			
+		div.category-quote div.entry-meta { display: none; }
+			
+		div.category-quote div.entry-wrapper { width: 560px; }
+
+	/*[[ --- Video Category ---]]*/
+
+	div.category-video { margin-top: 40px; }
+
+		div.category-video h2.entry-title { 
+			/* We don't completely hide this, we just make it invisible
+			   so that we can change the margins */
+			visibility: hidden;
+			margin-bottom: -48px;
+		}
+
+		div.category-video div.entry-content {	text-align: center;	}
+		
+			div.category-video p {
+			/* This affects the video too, since the video is being wrapped in
+				   a p */
+				margin-top: -12px;
+			}
+			
+		div.category-video div.entry-meta { display: none; }
+
+/*[[ --- Comment Elements ---]]*/
+
+#respond { padding: 20px 0 0 0; }
+
+	#respond h3 { font-weight: normal; font-size: 16px; }
+
+#comments-list { border-bottom: 1px solid #ccc; }
+
+	#comments-list ol { list-style-type: none; }
+
+		#comments-list ol li.comment { border-top: 1px solid #ccc; padding: 15px 0 15px 0; }
+
+		#comments-list ol li p { margin-bottom: 8px; }
+
+
+input#comment, input#author, input#email, input#url, textarea#comment { border: 1px solid #ccc; background: url('images/form-shadow.png'); padding: 4px; }
+
+textarea#comment { width: 400px; }
+
+div.form-label { margin-top: 5px; }
+
+input#submit { margin: 10px 0 10px 0; }
+
+
+div.comment-meta { font-size: 10px; margin: 0 0 0 15px; }
+
+	div.comment-meta:before { content: "» "; }
+
+#comments-list h3, #trackbacks-list h3 { font-weight: normal; font-size: 16px; }
+
+li.bypostauthor div.comment-author { padding-left: 50px; background: url('images/author.gif') left no-repeat; }
+
+#trackbacks-list { font-size: 10px; padding: 10px; margin: 15px 0 10px 10px; border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; background: url(http://openswitch.org/wp-content/themes/sandbox/images/trackback_bg.gif); }
+
+	#trackbacks-list div.comment-author, #trackbacks-list div.comment-author a { font-weight: normal; }
+
+	#trackbacks-list ol { list-style-type: none; }
+
+		#trackbacks-list ol li { background: url('images/url_bg.gif') /* Was an Absolute Path */ 0% 12px no-repeat; padding: 5px 0 5px 10px; }
+
+
+/*[[ --- Sidebar Elements ---]]*/
+
+#primary { 
+	padding-top: 250px;
+	width: 630px;
+	color: #444;
+}
+#primary a {
+	color: #555;
+	/*text-decoration: underline;*/
+} 
+#secondary {
+	width: 630px;
+	color: #444;
+}
+#secondary a {
+	color: #555;
+	/*text-decoration: underline;*/
+} 
+
+.sidebar ul li {
+	margin-bottom: 10px;
+}
+
+.sidebar ul ul li:before {
+	content: "\00BB \0020";
+	color: #999;
+}
+
+.sidebar ul, ol { 
+	list-style-type: none; 
+}
+
+.sidebar ul li ul li { 
+	margin-left: 5px;
+	margin-bottom: -5px;
+	font-size: 0.9em;
+}
+
+/*
+.sidebar #rss-links {
+	display: none;
+}
+*/
+
+.sidebar #searchform #s {
+	border: 1px solid #ccc;
+}
+.sidebar #searchform #searchsubmit {
+	border: 1px solid #ccc;
+	color: #444;
+}
+
+/*[[ --- Footer Elements ---]]*/
+
+#footer { 
+	clear: left; margin: 0 auto 0; padding: 10px 0px; text-align: center; 
+	display: none;
+}
+
+	#footer .meta-sep { display: none; }
+
+	#footer #generator-link, #footer #theme-link, #footer #theme-link-t1  { padding: 4px; }

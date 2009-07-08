@@ -1,0 +1,30 @@
+/*
+Here is the custom Stylesheet.  Make any changes to the T1 Theme here.  Just add .custom before your reference. For example:  .custom body {  }   
+
+You can also add new category styles following the example below.
+*/
+
+
+/*[[ --- Use this example to style your own categories i.e. Podcast ---]]*/
+	
+/*[[ --- Replace each XXX-XXX with your new category name i.e. Podcast ---]]*/
+	
+/*[[ --- Copy and repeat for as many categories as you would like to create.... ---]]*/
+
+.custom div.category-XXX-XXX  { margin-bottom: 50px; /*Leave Margin-Bottom in there to space out the entries*/ } /* Style the main category elements, give it a background, etc. */
+
+	.custom div.category-XXX-XXX h2.entry-title, div.category-XXX-XXX div.entry-date { display: none; } /* Hide or style the Entry Title and Entry Date */
+
+	.custom div.category-XXX-XXX div.entry-content {} /* Leave width alone for default.  If you change width, make sure to change the .entry-wrapper below to align the Permalink and Comment Count */
+
+		.custom div.category-XXX-XXX div.entry-content img  {} /* Style your individual elemts like images and paragraphs for how you want your category to look */
+		
+		.custom div.category-XXX-XXX div.entry-content p {}
+		
+	.custom div.category-XXX-XXX div.entry-wrapper {} /* Change width only if you changed the .entry-content width | Read note above */
+	
+	/* .custom div.category-XXX-XXX.post:hover span.permalink { display: none; } */    /* Use only to hide the Permalink and Comment Counts from your category's style */
+		
+	.custom div.category-XXX-XXX div.entry-meta { display: none; } /* Hide ore style the entry meta */
+	
+	.custom div.category-XXX-XXX div.tags p { /* display: block; font-size: .95em; background: #EEEEFF; width: 500px; padding: 0 5px; margin: 0; */ } /* Use to Display the Tags on your Category */
